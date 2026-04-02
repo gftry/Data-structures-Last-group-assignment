@@ -16,28 +16,27 @@ class ArrayStack(StackInterface):
 
     def push(self, item):
         """Add an item to the top of the stack."""
-        # TODO: Append the item to self.data
-        pass
+        self.data.append(item)
 
     def pop(self):
         """Remove and return the top item from the stack."""
-        # TODO: Check if stack is empty, then remove and return top item
-        pass
+        if self.is_empty():
+            raise IndexError("pop from empty stack")
+        return self.data.pop()
 
     def peek(self):
         """Return the top item without removing it."""
-        # TODO: Check if stack is empty, then return top item
-        pass
+        if self.is_empty():
+            raise IndexError("peek from empty stack")
+        return self.data[-1]
 
     def is_empty(self):
         """Return True if the stack is empty."""
-        # TODO: Return True if self.data has no items
-        pass
+        return len(self.data) == 0
 
     def size(self):
         """Return the number of items in the stack."""
-        # TODO: Return the length of self.data
-        pass
+        return len(self.data)
 
     def __str__(self):
         """Return a string representation of the stack."""
