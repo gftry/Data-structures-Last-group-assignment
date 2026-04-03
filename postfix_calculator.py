@@ -25,11 +25,13 @@ class PostfixCalculator:
             value (int): Variable value
         """
         # TODO: Insert variable into BST
+        self.variable_tree.insert(key, value)
         pass
 
     def delete_all_variables(self):
         """Delete all variables from the BST."""
         # TODO: Clear the BST
+        self.variable_tree.clear()
         pass
 
     def evaluate_postfix_expression(self, expression):
